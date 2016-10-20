@@ -84,13 +84,79 @@ class DataStore{
 
     func fetchData () {
     
+        var error:NSError? = nil
         
-    
+        let pirateRequest = NSFetchRequest(entityName: "Pirate")
+        let shipRequest = NSFetchRequest(entityName: "Ship")
+        let engineRequest = NSFetchRequest(entityName: "Engine")
+        
+        let pirateNameSorted = NSSortDescriptor(key: "name", ascending: true)
+            pirateRequest.sortDescriptors = [pirateNameSorted]
+        
+        do{
+            
+            pirates = try managedObjectContext.executeFetchRequest(pirateRequest) as! [Pirate]
+            ships = try managedObjectContext.executeFetchRequest(shipRequest) as! [Ship]
+            engines = try managedObjectContext.executeFetchRequest(engineRequest) as! [Engine]
+        
+        }
+        catch let nserror as NSError{
+            error = nserror
+            print("error: \(error)")
+            pirates = []
+            ships = []
+            engines = []
+        }
+        if pirates.count == 0 {
+            if ships.count == 0 || engines.count == 0 {
+                generateTestData()
+            }
+        }
     }
     
     func generateTestData () {
     
-    
+        let pirateOne: Pirate = NSEntityDescription.insertNewObjectForEntityForName("Pirate", inManagedObjectContext: managedObjectContext) as! Pirate
+        pirateOne.name = "pirateOne"
+        
+        let shipOne: Ship = NSEntityDescription.insertNewObjectForEntityForName("Ship", inManagedObjectContext: managedObjectContext) as! Ship
+        shipOne.name = "shipOne"
+        
+        let engineOne: Engine = NSEntityDescription.insertNewObjectForEntityForName("Engine", inManagedObjectContext: managedObjectContext) as! Engine
+        engineOne.propulsionType = "Solar Energy"
+        
+        pirateOne.ships?.insert(shipOne)
+        shipOne.pirate = pirateOne
+        shipOne.engine = engineOne
+        
+        let pirateTwo: Pirate = NSEntityDescription.insertNewObjectForEntityForName("Pirate", inManagedObjectContext: managedObjectContext) as! Pirate
+        pirateTwo.name = "PirateTwo"
+        
+        let shipTwo: Ship = NSEntityDescription.insertNewObjectForEntityForName("Ship", inManagedObjectContext: managedObjectContext) as! Ship
+        shipTwo.name = "shipTwo"
+        
+        let engineTwo: Engine = NSEntityDescription.insertNewObjectForEntityForName("Engine", inManagedObjectContext: managedObjectContext) as! Engine
+        engineTwo.propulsionType = "Solar Energy"
+
+        pirateTwo.ships?.insert(shipTwo)
+        shipTwo.pirate = pirateTwo
+        shipTwo.engine = engineTwo
+        
+        let pirateThree: Pirate = NSEntityDescription.insertNewObjectForEntityForName("Pirate", inManagedObjectContext: managedObjectContext) as! Pirate
+        pirateThree.name = "PirateThree"
+        
+        let shipThree: Ship = NSEntityDescription.insertNewObjectForEntityForName("Ship", inManagedObjectContext: managedObjectContext) as! Ship
+        shipThree.name = "shipThree"
+        
+        let engineThree: Engine = NSEntityDescription.insertNewObjectForEntityForName("Engine", inManagedObjectContext: managedObjectContext) as! Engine
+        engineThree.propulsionType = "Solar Energy"
+        
+        pirateThree.ships?.insert(shipThree)
+        shipThree.pirate = pirateThree
+        shipThree.engine = engineThree
+        
+        saveContext()
+        fetchData()
     
     }
 
