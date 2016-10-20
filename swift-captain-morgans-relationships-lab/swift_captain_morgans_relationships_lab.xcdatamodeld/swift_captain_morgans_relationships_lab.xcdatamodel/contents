@@ -1,11 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10174" systemVersion="15F34" minimumToolsVersion="Automatic">
-    <entity name="Engine" syncable="YES"/>
-    <entity name="Pirate" syncable="YES"/>
-    <entity name="Ship" syncable="YES"/>
+    <entity name="Engine" syncable="YES">
+        <attribute name="propulsionType" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="ship" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Ship" inverseName="engine" inverseEntity="Ship" syncable="YES"/>
+    </entity>
+    <entity name="Pirate" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="ships" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Ship" inverseName="pirate" inverseEntity="Ship" syncable="YES"/>
+    </entity>
+    <entity name="Ship" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="engine" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Engine" inverseName="ship" inverseEntity="Engine" syncable="YES"/>
+        <relationship name="pirate" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Pirate" inverseName="ships" inverseEntity="Pirate" syncable="YES"/>
+    </entity>
     <elements>
-        <element name="Pirate" positionX="-54" positionY="-9" width="128" height="45"/>
-        <element name="Ship" positionX="-36" positionY="9" width="128" height="45"/>
-        <element name="Engine" positionX="-18" positionY="27" width="128" height="45"/>
+        <element name="Pirate" positionX="-477" positionY="18" width="128" height="73"/>
+        <element name="Ship" positionX="-236" positionY="18" width="128" height="88"/>
+        <element name="Engine" positionX="43" positionY="27" width="128" height="73"/>
     </elements>
 </model>
