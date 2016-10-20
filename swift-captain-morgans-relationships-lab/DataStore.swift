@@ -82,5 +82,16 @@ class DataStore{
         }
     }
 
+    func fetchData () {
+    
+        
+    
+    }
+    
+    func generateTestData () {
+    
+    
+    
+    }
 
 }
