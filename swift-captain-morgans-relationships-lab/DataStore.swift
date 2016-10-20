@@ -10,6 +10,13 @@ import Foundation
 import CoreData
 
 class DataStore{
+    
+    var pirates: [Pirate] = []
+    var ships: [Ship] = []
+    var engines: [Engine] = []
+    
+    static let sharedDataStore = DataStore()
+    private init() {}
 
     // MARK: - Core Data stack
     
