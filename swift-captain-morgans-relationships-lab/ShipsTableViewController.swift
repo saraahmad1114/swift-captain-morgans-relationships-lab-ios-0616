@@ -1,5 +1,5 @@
 //
-//  PirateTableViewController.swift
+//  ShipsTableViewController.swift
 //  swift-captain-morgans-relationships-lab
 //
 //  Created by Flatiron School on 10/20/16.
@@ -8,6 +8,6 @@
 
 import UIKit
 
-class PirateTableViewController: UITableViewController {
+class ShipsTableViewController: UITableViewController {
 
 }

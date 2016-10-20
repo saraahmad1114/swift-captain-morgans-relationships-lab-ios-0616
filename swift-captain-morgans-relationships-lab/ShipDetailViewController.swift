@@ -1,13 +1,13 @@
 //
-//  PirateTableViewController.swift
+//  ShipDetailViewController.swift
 //  swift-captain-morgans-relationships-lab
 //
 //  Created by Flatiron School on 10/20/16.
 //  Copyright © 2016 Flatiron School. All rights reserved.
 //
 
-import UIKit
+import Cocoa
 
-class PirateTableViewController: UITableViewController {
+class ShipDetailViewController: UIViewController {
 
 }

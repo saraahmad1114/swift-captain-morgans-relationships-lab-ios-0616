@@ -15,6 +15,8 @@
 		1B4E02A61DB9452C006357AC /* Engine+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4E02A01DB9452C006357AC /* Engine+CoreDataProperties.swift */; };
 		1B4E02A71DB9452C006357AC /* Engine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4E02A11DB9452C006357AC /* Engine.swift */; };
 		1B4E02AA1DB95944006357AC /* PirateTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4E02A91DB95944006357AC /* PirateTableViewController.swift */; };
+		1B4E02AC1DB95989006357AC /* ShipsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4E02AB1DB95989006357AC /* ShipsTableViewController.swift */; };
+		1B4E02AE1DB959E7006357AC /* ShipDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4E02AD1DB959E7006357AC /* ShipDetailViewController.swift */; };
 		4C45CA8A1D3A9A7F0030A41D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C45CA891D3A9A7F0030A41D /* AppDelegate.swift */; };
 		4C45CA8F1D3A9A7F0030A41D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C45CA8D1D3A9A7F0030A41D /* Main.storyboard */; };
 		4C45CA921D3A9A7F0030A41D /* swift_captain_morgans_relationships_lab.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4C45CA901D3A9A7F0030A41D /* swift_captain_morgans_relationships_lab.xcdatamodeld */; };
@@ -31,6 +33,8 @@
 		1B4E02A01DB9452C006357AC /* Engine+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Engine+CoreDataProperties.swift"; path = "../Engine+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		1B4E02A11DB9452C006357AC /* Engine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Engine.swift; path = ../Engine.swift; sourceTree = "<group>"; };
 		1B4E02A91DB95944006357AC /* PirateTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PirateTableViewController.swift; sourceTree = "<group>"; };
+		1B4E02AB1DB95989006357AC /* ShipsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShipsTableViewController.swift; sourceTree = "<group>"; };
+		1B4E02AD1DB959E7006357AC /* ShipDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShipDetailViewController.swift; sourceTree = "<group>"; };
 		4C45CA861D3A9A7F0030A41D /* swift-captain-morgans-relationships-lab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swift-captain-morgans-relationships-lab.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C45CA891D3A9A7F0030A41D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C45CA8E1D3A9A7F0030A41D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -82,7 +86,9 @@
 			children = (
 				4C45CA891D3A9A7F0030A41D /* AppDelegate.swift */,
 				4C45CA8D1D3A9A7F0030A41D /* Main.storyboard */,
+				1B4E02AD1DB959E7006357AC /* ShipDetailViewController.swift */,
 				1B4E02A91DB95944006357AC /* PirateTableViewController.swift */,
+				1B4E02AB1DB95989006357AC /* ShipsTableViewController.swift */,
 				4C45CA901D3A9A7F0030A41D /* swift_captain_morgans_relationships_lab.xcdatamodeld */,
 				1B4E029A1DB94382006357AC /* DataStore.swift */,
 				1B4E029C1DB9452C006357AC /* Pirate+CoreDataProperties.swift */,
@@ -175,6 +181,7 @@
 				4C45CA921D3A9A7F0030A41D /* swift_captain_morgans_relationships_lab.xcdatamodeld in Sources */,
 				1B4E029B1DB94382006357AC /* DataStore.swift in Sources */,
 				1B4E02AA1DB95944006357AC /* PirateTableViewController.swift in Sources */,
+				1B4E02AE1DB959E7006357AC /* ShipDetailViewController.swift in Sources */,
 				1B4E02A21DB9452C006357AC /* Pirate+CoreDataProperties.swift in Sources */,
 				1B4E02A61DB9452C006357AC /* Engine+CoreDataProperties.swift in Sources */,
 				1B4E02A31DB9452C006357AC /* Pirate.swift in Sources */,
@@ -182,6 +189,7 @@
 				1B4E02A51DB9452C006357AC /* Ship.swift in Sources */,
 				1B4E02A71DB9452C006357AC /* Engine.swift in Sources */,
 				1B4E02A41DB9452C006357AC /* Ship+CoreDataProperties.swift in Sources */,
+				1B4E02AC1DB95989006357AC /* ShipsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
